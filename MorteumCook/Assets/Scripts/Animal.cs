@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Animal : MonoBehaviour
+public class Animal : CatchableObjects
 {
     public Transform[] wayPoints = new Transform[5];
 
@@ -22,14 +22,14 @@ public class Animal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentwayPoint == null){
+       /* if(currentwayPoint == null){
              goToTarget();
         }else{
             if(arrivedTarget){
             goToTarget();
             }
         }
-        calculateDistanceToTarget();
+        calculateDistanceToTarget();*/
 
        
     }
