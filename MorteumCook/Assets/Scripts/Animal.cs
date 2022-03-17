@@ -5,33 +5,41 @@ using UnityEngine.AI;
 
 public class Animal : CatchableObjects
 {
-    public Transform[] wayPoints = new Transform[5];
+    public Transform[] wayPoints = new Transform[4];
 
     private NavMeshAgent agent;
     public Transform currentwayPoint = null;
     public bool arrivedTarget = false;
-    private bool dead; 
+    
+    private bool dead;
+    public bool isGrabbed;
 
     // Start is called before the first frame update
     private void Awake()
-    {
-        
+    {        
         agent = GetComponent<NavMeshAgent>();
     }
     
     // Update is called once per frame
     void Update()
     {
-       /* if(currentwayPoint == null){
-             goToTarget();
-        }else{
-            if(arrivedTarget){
+        if (isGrabbed)
+            return;
+
+        if (currentwayPoint == null)
+        {
             goToTarget();
+        }
+        else
+        {
+            if (arrivedTarget)
+            {
+                goToTarget();
             }
         }
-        calculateDistanceToTarget();*/
+        calculateDistanceToTarget();
 
-       
+
     }
 
     public void goToTarget(){
@@ -40,6 +48,12 @@ public class Animal : CatchableObjects
         agent.destination = currentwayPoint.position;
         arrivedTarget = false;
 
+    }
+
+    public void SetGrabbed()
+    {
+        agent.isStopped = true;
+        isGrabbed = true;
     }
 
     public void calculateDistanceToTarget()

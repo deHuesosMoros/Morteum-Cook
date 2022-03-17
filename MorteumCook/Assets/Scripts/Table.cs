@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Table : MonoBehaviour
 {   
-    public GameObject tablePoint;
+    [HideInInspector]public GameObject tablePoint;
 
     
     
@@ -30,4 +30,6 @@ public class Table : MonoBehaviour
     virtual public bool canUseTable(GameObject other){
        return true;
     }
+
+
 }

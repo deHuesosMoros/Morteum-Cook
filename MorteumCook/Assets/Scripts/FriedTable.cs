@@ -18,7 +18,6 @@ public class FriedTable : Table
             Ingredient ingredient =  tablePoint.transform.GetChild(0).GetComponent<Ingredient>();            
             ingredient.isCooked = true; 
         }
-
         
     }
 

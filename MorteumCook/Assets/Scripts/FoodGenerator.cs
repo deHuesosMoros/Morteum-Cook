@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class FoodGenerator : Table
 {
-    
+    public FoodContainer[] containers;
+
     void Start()
     {
         
@@ -15,8 +16,6 @@ public class FoodGenerator : Table
     {
         if(isEmpty() == false){
             Destroy(tablePoint.transform.GetChild(0).gameObject);
-
-            FoodContainer[] containers = this.transform.GetComponentsInChildren<FoodContainer>();
 
             foreach (FoodContainer container in containers){
                 container.increaseNumber();
