@@ -125,5 +125,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60074e238ffec5141b3ef482dac6949d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 8
+  type: 12
   isCooked: 0

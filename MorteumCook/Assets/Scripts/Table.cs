@@ -27,8 +27,7 @@ public class Table : MonoBehaviour
         }
     }
 
-    public bool canUseTable(GameObject other){
-       return false;
-
+    virtual public bool canUseTable(GameObject other){
+       return true;
     }
 }

@@ -25,14 +25,12 @@ public class CatchAndRelease : MonoBehaviour
             Table table = other.gameObject.GetComponent<Table>();
             if(pickedObject != null){
                 CatchableObjects catchableObject = pickedObject.gameObject.GetComponent<CatchableObjects>();
-                if(table){
-                if(table.canUseTable(pickedObject)){
+                if(table && table.canUseTable(pickedObject)){
                     pickedObject.GetComponent<Rigidbody>().useGravity = true;
                     pickedObject.GetComponent<Rigidbody>().isKinematic = false;
                     pickedObject.gameObject.transform.position =  table.tablePoint.transform.position;
                     pickedObject.gameObject.transform.SetParent(table.tablePoint.transform);
                     pickedObject = null;
-                }
             } 
             }
             

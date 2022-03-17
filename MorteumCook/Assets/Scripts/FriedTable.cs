@@ -14,7 +14,7 @@ public class FriedTable : Table
     // Update is called once per frame
     void Update()
     {
-        if(isEmpty()){
+        if(isEmpty() == false){
             Ingredient ingredient =  tablePoint.transform.GetChild(0).GetComponent<Ingredient>();            
             ingredient.isCooked = true; 
         }
@@ -22,9 +22,13 @@ public class FriedTable : Table
         
     }
 
-    public bool canUseTable(GameObject other){
+    override public bool canUseTable(GameObject other){
         if(isEmpty()){
-            return true;
+            if(other.transform.GetComponent<Ingredient>().type.ToString() == "Bone"){
+                    return true;               
+            }else{
+                return false;
+            }
         }else{
             return false;
         }

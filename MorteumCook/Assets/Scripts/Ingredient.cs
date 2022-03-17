@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Flags]
+   [System.Flags]
  public enum IngredientType
  {
      Worm = (1 << 0),
@@ -12,6 +12,7 @@ using UnityEngine;
  }
 public class Ingredient : CatchableObjects
 {
+
     public IngredientType type;
     public bool isCooked; 
 
@@ -20,10 +21,8 @@ public class Ingredient : CatchableObjects
     // Start is called before the first frame update
     void Start()
     {
-       /* if (resistance.HasFlag(abilityType))
-        {
-          print("You are resistance to this damage type");
-        }*/
+        Debug.Log(type);   
+      
     }
 
     // Update is called once per frame
@@ -31,4 +30,7 @@ public class Ingredient : CatchableObjects
     {
         
     }
+
+    
+
 }
