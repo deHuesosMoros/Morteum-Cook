@@ -300,6 +300,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: tableBuild
       objectReference: {fileID: 0}
+    - target: {fileID: 4952720955614164039, guid: 248607f60dde82b4cad7aac0ba5a1dc8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4952720955614164042, guid: 248607f60dde82b4cad7aac0ba5a1dc8, type: 3}
+      propertyPath: tableIngredientType
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 248607f60dde82b4cad7aac0ba5a1dc8, type: 3}
 --- !u!1 &230879231
@@ -809,6 +817,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7097343971077292178, guid: a8820ac737f4b824f913010ef8bd6298, type: 3}
+      propertyPath: tableIngredientType
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7097343971077292182, guid: a8820ac737f4b824f913010ef8bd6298, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -856,6 +868,10 @@ PrefabInstance:
     - target: {fileID: 7097343971077292265, guid: a8820ac737f4b824f913010ef8bd6298, type: 3}
       propertyPath: m_Name
       value: tableCook
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097343971077292265, guid: a8820ac737f4b824f913010ef8bd6298, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8820ac737f4b824f913010ef8bd6298, type: 3}
@@ -947,6 +963,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8713515067083349556, guid: 78dde8caae601b147af8a28d8fb05e4b, type: 3}
+      propertyPath: enum1
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713515067083349556, guid: 78dde8caae601b147af8a28d8fb05e4b, type: 3}
+      propertyPath: enum2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713515067083349556, guid: 78dde8caae601b147af8a28d8fb05e4b, type: 3}
+      propertyPath: receta
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713515067083349556, guid: 78dde8caae601b147af8a28d8fb05e4b, type: 3}
+      propertyPath: recetaUI
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713515067083349556, guid: 78dde8caae601b147af8a28d8fb05e4b, type: 3}
+      propertyPath: ingredient2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713515067083349556, guid: 78dde8caae601b147af8a28d8fb05e4b, type: 3}
+      propertyPath: ingredientEnum
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713515067083349556, guid: 78dde8caae601b147af8a28d8fb05e4b, type: 3}
+      propertyPath: tableIngredientType
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8713515067083349560, guid: 78dde8caae601b147af8a28d8fb05e4b, type: 3}
       propertyPath: m_RootOrder
       value: 25
@@ -1585,6 +1629,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: tableBuild (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4952720955614164039, guid: 248607f60dde82b4cad7aac0ba5a1dc8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4952720955614164042, guid: 248607f60dde82b4cad7aac0ba5a1dc8, type: 3}
+      propertyPath: tableIngredientType
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 248607f60dde82b4cad7aac0ba5a1dc8, type: 3}
 --- !u!1 &1127896365
@@ -1858,6 +1910,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8713515067083349556, guid: 78dde8caae601b147af8a28d8fb05e4b, type: 3}
+      propertyPath: tableIngredientType
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8713515067083349560, guid: 78dde8caae601b147af8a28d8fb05e4b, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -1905,6 +1961,10 @@ PrefabInstance:
     - target: {fileID: 8713515067083349561, guid: 78dde8caae601b147af8a28d8fb05e4b, type: 3}
       propertyPath: m_Name
       value: tableFried (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713515067083349561, guid: 78dde8caae601b147af8a28d8fb05e4b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78dde8caae601b147af8a28d8fb05e4b, type: 3}
@@ -2573,6 +2633,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7097343971077292178, guid: a8820ac737f4b824f913010ef8bd6298, type: 3}
+      propertyPath: tableIngredientType
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7097343971077292182, guid: a8820ac737f4b824f913010ef8bd6298, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -2620,6 +2684,10 @@ PrefabInstance:
     - target: {fileID: 7097343971077292265, guid: a8820ac737f4b824f913010ef8bd6298, type: 3}
       propertyPath: m_Name
       value: tableCook (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097343971077292265, guid: a8820ac737f4b824f913010ef8bd6298, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8820ac737f4b824f913010ef8bd6298, type: 3}
@@ -5568,6 +5636,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tablePoint: {fileID: 0}
+  tableIngredientType: 0
+  receta: 0
+  recetaUI: 0
   containers:
   - {fileID: 4351253245276592303}
   - {fileID: 4351253244043632435}

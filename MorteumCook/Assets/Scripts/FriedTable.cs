@@ -22,7 +22,7 @@ public class FriedTable : Table
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            RemoveIngredient(ingredientEnum);
+            //RemoveIngredient(ingredientEnum);
             //ValidateRecipe();
         }
 
