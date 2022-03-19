@@ -5,6 +5,7 @@ using UnityEngine;
 public class Recipe : CatchableObjects
 {
      public IngredientType recipeAcumulator;
+     public Material[] dishesMaterials = new Material[11];
      
 
     void Start()
