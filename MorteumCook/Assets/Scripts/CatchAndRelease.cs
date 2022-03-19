@@ -35,8 +35,6 @@ public class CatchAndRelease : MonoBehaviour
             } 
             }
             
-            
-            
         }       
     }
 
@@ -79,15 +77,5 @@ public class CatchAndRelease : MonoBehaviour
 
     }
 
-    public void releaseSomething(){
-
-        if(Input.GetKey("r")){
-            if(pickedObject != null){
-                pickedObject.GetComponent<Rigidbody>().useGravity = true;
-                pickedObject.GetComponent<Rigidbody>().isKinematic = false;
-                pickedObject.gameObject.transform.SetParent(null);
-                pickedObject = null;
-            }
-        }
-    }
+   
 }

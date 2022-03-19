@@ -5,6 +5,7 @@ using UnityEngine;
 public class Table : MonoBehaviour
 {   
     [HideInInspector]public GameObject tablePoint;
+    public IngredientType ingredientAllowed;
 
     
     
@@ -28,8 +29,22 @@ public class Table : MonoBehaviour
     }
 
     virtual public bool canUseTable(GameObject other){
-       return true;
+        bool validator = false;
+       if(isEmpty()){
+           Ingredient ingredient = other.GetComponent<Ingredient>();
+           if(ingredient){
+               IngredientType ingredientProvided = ingredient.type;
+                if(ingredientAllowed.HasFlag(ingredientProvided)){
+                    validator = true;
+                }
+           }
+            
+       }
+       return validator;
     }
 
+    public void Cooked(Ingredient ingredient){
+        ingredient.isCooked = true;
+    }
 
 }

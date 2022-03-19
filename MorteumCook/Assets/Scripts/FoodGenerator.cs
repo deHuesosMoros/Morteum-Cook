@@ -24,11 +24,14 @@ public class FoodGenerator : Table
         }
     }
 
-     override public bool canUseTable(GameObject other){
-         if(other.GetComponent<Animal>()){
-             return true;
-         }else{
-             return false;
+    override public bool canUseTable(GameObject other){
+         bool validator = false;
+         if(isEmpty()){
+             if(other.GetComponent<Animal>()){
+                validator = true;
+            }
          }
-     }
+            
+         return validator;
+     } 
 }
