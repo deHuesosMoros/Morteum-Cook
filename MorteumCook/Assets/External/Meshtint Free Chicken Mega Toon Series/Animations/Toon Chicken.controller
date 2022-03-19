@@ -19,7 +19,7 @@ AnimatorController:
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 1
+    m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: Eat
     m_Type: 4
@@ -462,7 +462,7 @@ AnimatorStateMachine:
     m_Position: {x: 672, y: -204, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102083942504639260}
-    m_Position: {x: 672, y: -264, z: 0}
+    m_Position: {x: 670, y: -260, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102724295969363032}
     m_Position: {x: 876, y: 132, z: 0}
