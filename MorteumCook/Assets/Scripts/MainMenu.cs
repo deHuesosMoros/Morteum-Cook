@@ -26,7 +26,8 @@ public class MainMenu : MonoBehaviour
     public void EscenaJuego()
 
     {
-        SceneManager.LoadScene("Game");
+        //SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Escenario");
     }
 
     public void EscenaControl(string nombreGuia)
