@@ -23,7 +23,7 @@ public class Animal : CatchableObjects
     // Update is called once per frame
     void Update()
     {
-        if (isGrabbed)
+        /*if (isGrabbed)
             return;
 
         if (currentwayPoint == null)
@@ -37,7 +37,7 @@ public class Animal : CatchableObjects
                 goToTarget();
             }
         }
-        calculateDistanceToTarget();
+        calculateDistanceToTarget();*/
 
 
     }

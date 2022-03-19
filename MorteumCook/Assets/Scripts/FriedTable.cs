@@ -15,22 +15,11 @@ public class FriedTable : Table
     void Update()
     {
         if(isEmpty() == false){
-            Ingredient ingredient =  tablePoint.transform.GetChild(0).GetComponent<Ingredient>();            
-            ingredient.isCooked = true; 
+            Cooked(tablePoint.transform.GetChild(0).GetComponent<Ingredient>());        
+             
         }
         
     }
 
-    override public bool canUseTable(GameObject other){
-        if(isEmpty()){
-            if(other.transform.GetComponent<Ingredient>().type.ToString() == "Bone"){
-                    return true;               
-            }else{
-                return false;
-            }
-        }else{
-            return false;
-        }
-
-    }
+    
 }

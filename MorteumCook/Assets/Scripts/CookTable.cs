@@ -13,6 +13,9 @@ public class CookTable : Table
     // Update is called once per frame
     void Update()
     {
-        
+        if(isEmpty() == false){
+            Cooked(tablePoint.transform.GetChild(0).GetComponent<Ingredient>());        
+             
+        }
     }
 }
