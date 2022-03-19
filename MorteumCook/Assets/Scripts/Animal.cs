@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class Animal : CatchableObjects
 {
+    public ChickenGenerator myManager;
     public Transform[] wayPoints = new Transform[4];
 
     private NavMeshAgent agent;
@@ -14,37 +15,55 @@ public class Animal : CatchableObjects
     private bool dead;
     public bool isGrabbed;
 
+    public Animator chikenAnimator;
+
     // Start is called before the first frame update
     private void Awake()
-    {        
+    {
+        //chikenAnimator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
     }
-    
+
+    private void Start()
+    {
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
-        /*if (isGrabbed)
+        if (isGrabbed)
             return;
 
-        if (currentwayPoint == null)
+        if (myManager != null)
         {
-            goToTarget();
-        }
-        else
-        {
-            if (arrivedTarget)
+            if (currentwayPoint == null)
             {
                 goToTarget();
             }
+            else
+            {
+                if (arrivedTarget)
+                {
+                    goToTarget();
+                }
+            }
+            calculateDistanceToTarget();
         }
-        calculateDistanceToTarget();*/
+
+        
 
 
     }
 
+    public void SetRun() {
+        chikenAnimator.SetBool("Run", true);
+    }
+
+
     public void goToTarget(){
 
-        currentwayPoint = wayPoints[Random.Range(1,4)];
+        currentwayPoint = myManager.wayPoints[Random.Range(1,4)];
         agent.destination = currentwayPoint.position;
         arrivedTarget = false;
 

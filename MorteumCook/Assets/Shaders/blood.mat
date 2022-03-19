@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: blood
+  m_Shader: {fileID: -6465566751694194690, guid: 0bb9cb53d050445b9b3ff109e508711c, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_27a46f0c57224b379abb61232d417542: 1
+    - Vector1_905cff1133df4b94a7aae9bb8f9682ae: 4.13
+    - Vector1_e838645a69714042a92484ab5f1c9d89: 9.13
+    m_Colors:
+    - Color_725674d8f7f4441987de74f6b3db8838: {r: 0.10735294, g: 0.007352941, b: 0.008333334, a: 0}
+    - Color_a3916d687cdd4e128407ea3f9282906a: {r: 0.3584906, g: 0.025364896, b: 0.04117793, a: 0}
+  m_BuildTextureStacks: []
