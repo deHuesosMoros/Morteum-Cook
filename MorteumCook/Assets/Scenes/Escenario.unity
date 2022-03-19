@@ -4687,6 +4687,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChickenPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 7467841416478543101, guid: f3ecfacd996a99b48bf4e59e53c7e54f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3ecfacd996a99b48bf4e59e53c7e54f, type: 3}
 --- !u!1 &1772915889
