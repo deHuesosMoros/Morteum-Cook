@@ -413,6 +413,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff3e64a2cb3ae40ccb9ba9e734842be4, type: 3}
+--- !u!95 &79962653 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6158329510355444686, guid: 4e092a50f9afc458c814769db7ab5d2f, type: 3}
+  m_PrefabInstance: {fileID: 878920668}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &134369534
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,6 +904,25 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!1 &313269013 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8642217612713230573, guid: 4e092a50f9afc458c814769db7ab5d2f, type: 3}
+  m_PrefabInstance: {fileID: 878920668}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &313269014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313269013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9467d1ab24a4cc9b0a80a12fc30ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leerAnimator: {fileID: 79962653}
+  player: {fileID: 313269013}
 --- !u!1 &347252530
 GameObject:
   m_ObjectHideFlags: 0
