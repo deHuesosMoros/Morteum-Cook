@@ -30,7 +30,7 @@ public class HeroController : MonoBehaviour
         vectorMovimiento.y = 0f;
         vectorMovimiento.z = Ejev; 
 
-        controlador.SimpleMove(vectorMovimiento * (velocidad * Time.deltaTime));
+        controlador.Move(vectorMovimiento * (velocidad * Time.deltaTime));
 
         if(vectorMovimiento != Vector3.zero){
             transform.forward = vectorMovimiento;

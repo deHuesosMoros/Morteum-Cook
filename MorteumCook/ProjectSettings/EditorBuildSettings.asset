@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EscControl.unity
     guid: ca31b896ccbda4f66b22e548d2d8e378
+  - enabled: 1
+    path: Assets/Scenes/Escenario.unity
+    guid: 767d3aee363954c8ba2e47d836678a17
   m_configObjects: {}
