@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FoodContainer : MonoBehaviour
 {
     public int amountFood;
     public GameObject prefabFood;
     public GameObject decorationContainer;
-    public TextMesh text;
+    public Text text;
     
     void Awake()
     {
