@@ -19,9 +19,7 @@ public class CatchAndRelease : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             chefAnimController.SetTrigger("Grab");
-        } 
-        
-        
+        }  
     }
 
     private void OnTriggerStay(Collider other){
@@ -30,8 +28,8 @@ public class CatchAndRelease : MonoBehaviour
             Table table = other.gameObject.GetComponent<Table>();
             if(pickedObject != null){
                 CatchableObjects catchableObject = pickedObject.gameObject.GetComponent<CatchableObjects>();
-                if(table && table.canUseTable(pickedObject)){
-
+                if(table && table.canUseTable(pickedObject))
+                {                   
                     chefAnimController.SetBool("hasGrabbed", false);
                     pickedObject.GetComponent<Rigidbody>().useGravity = true;
                     pickedObject.GetComponent<Rigidbody>().isKinematic = false;
