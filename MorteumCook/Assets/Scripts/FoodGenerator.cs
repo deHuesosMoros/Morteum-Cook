@@ -15,15 +15,20 @@ public class FoodGenerator : Table
     void Update()
     {
         if(isEmpty() == false){
-            Destroy(tablePoint.transform.GetChild(0).gameObject);
 
-            foreach (FoodContainer container in containers){
-                container.increaseNumber();
-            }
-
+            StartCoroutine(putAnimal());
+            
         }
     }
 
+     IEnumerator putAnimal()
+    {
+        yield return new WaitForSeconds(5f);
+        Destroy(tablePoint.transform.GetChild(0).gameObject);
+        foreach (FoodContainer container in containers){
+                container.increaseNumber();
+            }
+    }
     override public bool canUseTable(GameObject other){
          bool validator = false;
          if(isEmpty()){
