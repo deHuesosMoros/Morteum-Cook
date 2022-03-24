@@ -17,25 +17,21 @@ public class FoodGenerator : Table
     void Update()
     {
         if(isEmpty() == false){
-            if(canIncrease == true){
+            if(canIncrease == true)
+            {
                 foreach (FoodContainer container in containers){
                 container.increaseNumber();    
                 }
-            }
-            
+            }   
+
             canIncrease = false;
-        chrush.Crushing();
-        Animal chicken = tablePoint.transform.GetChild(0).gameObject.GetComponent<Animal>();
-        GameObject vfx = Instantiate(chicken.puffVFXPrefab);
-        vfx.transform.position = chicken.transform.position;
-        chicken.PlayChikenScream();
-        Destroy(tablePoint.transform.GetChild(0).gameObject, 0.7F);
-            
         }
     }
 
-    override public bool canUseTable(GameObject other){
+    override public bool canUseTable(GameObject other)
+    {
          bool validator = false;
+
          if(isEmpty()){
              if(other.GetComponent<Animal>()){
                 validator = true;
@@ -44,5 +40,16 @@ public class FoodGenerator : Table
          }
             
          return validator;
-     } 
+    } 
+
+
+    public void Crush()
+    {
+        chrush.Crushing();
+        Animal chicken = tablePoint.transform.GetChild(0).gameObject.GetComponent<Animal>();
+        GameObject vfx = Instantiate(chicken.puffVFXPrefab);
+        vfx.transform.position = chicken.transform.position;
+        chicken.PlayChikenScream();
+        Destroy(tablePoint.transform.GetChild(0).gameObject, 0.7F);
+    }
 }

@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class Crusher : MonoBehaviour
 {
+    private AudioSource stampSource;
     public Animator anim;
      public bool toCrush;
+
+
+    private void Awake()
+    {
+        stampSource = GetComponent<AudioSource>();
+    }
 
     void Start()
     {
@@ -20,5 +27,12 @@ public class Crusher : MonoBehaviour
 
     public void Crushing(){
         anim.SetTrigger("toCrush");
+    }
+
+
+    //Called from animation event
+    public void PlayStamp()
+    {
+        stampSource.Play();
     }
 }

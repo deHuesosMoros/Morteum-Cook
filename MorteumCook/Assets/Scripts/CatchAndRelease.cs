@@ -20,22 +20,36 @@ public class CatchAndRelease : MonoBehaviour
             chefAnimController.SetTrigger("Grab");
         }
         
+
+
     }
 
     private void OnTriggerStay(Collider other){
         canGrabSomething(other);
+
         if(Input.GetKey("r")){
+
             Table table = other.gameObject.GetComponent<Table>();
+
             if(pickedObject != null){
+
                 CatchableObjects catchableObject = pickedObject.gameObject.GetComponent<CatchableObjects>();
-                if(table && table.canUseTable(pickedObject)){
+
+                if(table && table.canUseTable(pickedObject))
+                {                                      
                     chefAnimController.SetBool("hasGrabbed", false);
                     pickedObject.GetComponent<Rigidbody>().useGravity = false;
                     pickedObject.GetComponent<Rigidbody>().isKinematic = false;
                     pickedObject.gameObject.transform.position =  table.tablePoint.transform.position;
                     pickedObject.gameObject.transform.SetParent(table.tablePoint.transform);
                     pickedObject = null;
-            } 
+
+                    if (table.GetType() == typeof(FoodGenerator))
+                    {
+                        FoodGenerator FG = table as FoodGenerator;
+                        FG.Crush();
+                    }
+                } 
             }
             
         }       
@@ -75,10 +89,8 @@ public class CatchAndRelease : MonoBehaviour
                 grabSomething(foodPicked);
                 food.decreaseNumber();
                 }
-            }
-             
+            }             
         }
-
     }
 
    
