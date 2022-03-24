@@ -2090,6 +2090,10 @@ PrefabInstance:
       value: Chef
       objectReference: {fileID: 0}
     - target: {fileID: 8642217612713230582, guid: 4e092a50f9afc458c814769db7ab5d2f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8642217612713230582, guid: 4e092a50f9afc458c814769db7ab5d2f, type: 3}
       propertyPath: m_SlopeLimit
       value: 1.12
       objectReference: {fileID: 0}
