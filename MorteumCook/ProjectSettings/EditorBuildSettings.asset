@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Escenario.unity
     guid: 767d3aee363954c8ba2e47d836678a17
+  - enabled: 1
+    path: Assets/Scenes/McGuia.unity
+    guid: 11aa1796bf05b7542a1997b40d8cd3fe
   m_configObjects: {}

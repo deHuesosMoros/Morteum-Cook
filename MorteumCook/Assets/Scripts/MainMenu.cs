@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
 
     public GameObject canvasControl;
     public GameObject canvasMenu;
+    public GameObject canvasGuia;
 
 
     // Start is called before the first frame update
@@ -40,8 +41,8 @@ public class MainMenu : MonoBehaviour
 
     public void ShowMenu()
     {
-        
-        
+
+
     }
 
     public void Salir()
@@ -50,13 +51,31 @@ public class MainMenu : MonoBehaviour
 
     }
 
- public void Volver()
+    public void Volver()
 
     {
         canvasControl.SetActive(false);
         canvasMenu.SetActive(true);
         //SceneManager.LoadScene("MainMenuEsb");
+
+        canvasGuia.SetActive(false);
+        canvasMenu.SetActive(true);
     }
 
+    public void Guia()
+    {
 
+        SceneManager.LoadScene("McGuia");
     }
+
+        
+       
+    
+    public void Guia(string nombreGuia)
+
+    {
+        canvasGuia.SetActive(true);
+      canvasMenu.SetActive(false);
+      
+    }
+ }
