@@ -53,7 +53,6 @@ public class CatchAndRelease : MonoBehaviour
         }
 
         other.transform.position = handPoint.transform.position;
-
         other.gameObject.transform.SetParent(handPoint.gameObject.transform);
         pickedObject = other.gameObject;
     }

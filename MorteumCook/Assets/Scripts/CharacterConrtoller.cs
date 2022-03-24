@@ -172,7 +172,6 @@ public class CharacterConrtoller : MonoBehaviour
             if (rbCharacter.velocity.magnitude > maxSpeed)
                 rbCharacter.AddForce((m_currentSpeed * -1) * deceleration * Time.deltaTime, ForceMode.VelocityChange);
         }
-
     }
 
 

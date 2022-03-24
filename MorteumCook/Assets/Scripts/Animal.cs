@@ -72,6 +72,8 @@ public class Animal : CatchableObjects
     public void SetGrabbed()
     {
         agent.isStopped = true;
+        GetComponent<NavMeshAgent>().enabled = false;
+        GetComponent<Collider>().enabled = false;
         isGrabbed = true;
     }
 
