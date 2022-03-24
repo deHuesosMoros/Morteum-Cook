@@ -15,6 +15,10 @@ public class Crusher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        anim.SetBool("toCrush", toCrush);
+        
+    }
+
+    public void Crushing(){
+        anim.SetTrigger("toCrush");
     }
 }
