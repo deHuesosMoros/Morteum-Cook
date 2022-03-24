@@ -5,6 +5,7 @@ using UnityEngine;
 public class BuildTable : Table
 {
     public GameObject dishPrefab;
+
    
 
     void Start()

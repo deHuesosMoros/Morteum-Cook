@@ -5,6 +5,8 @@ using UnityEngine;
 public class FoodGenerator : Table
 {
     public FoodContainer[] containers;
+    public Crusher chrush;
+    public bool canIncrease = false;
 
     void Start()
     {
@@ -15,25 +17,29 @@ public class FoodGenerator : Table
     void Update()
     {
         if(isEmpty() == false){
-
-            StartCoroutine(putAnimal());
+            if(canIncrease == true){
+                foreach (FoodContainer container in containers){
+                container.increaseNumber();    
+                }
+            }
+            
+            canIncrease = false;
+        chrush.Crushing();
+        Animal chicken = tablePoint.transform.GetChild(0).gameObject.GetComponent<Animal>();
+        GameObject vfx = Instantiate(chicken.puffVFXPrefab);
+        vfx.transform.position = chicken.transform.position;
+        chicken.PlayChikenScream();
+        Destroy(tablePoint.transform.GetChild(0).gameObject, 0.7F);
             
         }
     }
 
-     IEnumerator putAnimal()
-    {
-        yield return new WaitForSeconds(5f);
-        Destroy(tablePoint.transform.GetChild(0).gameObject);
-        foreach (FoodContainer container in containers){
-                container.increaseNumber();
-            }
-    }
     override public bool canUseTable(GameObject other){
          bool validator = false;
          if(isEmpty()){
              if(other.GetComponent<Animal>()){
                 validator = true;
+                canIncrease = true;
             }
          }
             

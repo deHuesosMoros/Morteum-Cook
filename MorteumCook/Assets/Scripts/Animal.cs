@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class Animal : CatchableObjects
 {
+
+
     public ChickenGenerator myManager;
     public Transform[] wayPoints = new Transform[4];
 
@@ -17,9 +19,17 @@ public class Animal : CatchableObjects
 
     public Animator chikenAnimator;
 
+
+    public GameObject puffVFXPrefab;
+    private AudioSource chikenAsource;
+    [Header("Sound Clips")]
+    public AudioClip chikenGrabedClip;
+
+
     // Start is called before the first frame update
     private void Awake()
     {
+        chikenAsource = GetComponent<AudioSource>();
         //chikenAnimator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
     }
@@ -61,24 +71,35 @@ public class Animal : CatchableObjects
     }
 
 
-    public void goToTarget(){
-
+    public void goToTarget()
+    {
         currentwayPoint = myManager.wayPoints[Random.Range(1,4)];
         agent.destination = currentwayPoint.position;
         arrivedTarget = false;
-
     }
 
     public void SetGrabbed()
     {
+        GameObject vfx = Instantiate(puffVFXPrefab);
+        vfx.transform.position = this.transform.position;
+        //chikenAsource.clip = chikenGrabedClip;
+        //chikenAsource.Play();
+        PlayChikenScream();
         agent.isStopped = true;
+        GetComponent<NavMeshAgent>().enabled = false;
+        GetComponent<Collider>().enabled = false;
         isGrabbed = true;
+    }
+
+    public void PlayChikenScream()
+    {
+        chikenAsource.PlayOneShot(chikenGrabedClip);
     }
 
     public void calculateDistanceToTarget()
     {
         Vector3 agentToTarget = currentwayPoint.position - this.transform.position;
-        if(agentToTarget.magnitude < 1){
+        if(agentToTarget.magnitude < 2){
                arrivedTarget = true;
         }
     }

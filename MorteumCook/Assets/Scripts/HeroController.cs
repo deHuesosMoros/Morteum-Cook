@@ -17,7 +17,7 @@ public class HeroController : MonoBehaviour
 
     void Update(){
 
-        mover();
+        //mover();
 
     }
 
