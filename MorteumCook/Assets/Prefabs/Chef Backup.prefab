@@ -5020,7 +5020,7 @@ GameObject:
   - component: {fileID: 6838990073059680433}
   - component: {fileID: 313269018}
   m_Layer: 3
-  m_Name: Chef
+  m_Name: Chef Backup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
