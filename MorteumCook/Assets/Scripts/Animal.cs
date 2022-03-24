@@ -99,7 +99,7 @@ public class Animal : CatchableObjects
     public void calculateDistanceToTarget()
     {
         Vector3 agentToTarget = currentwayPoint.position - this.transform.position;
-        if(agentToTarget.magnitude < 1){
+        if(agentToTarget.magnitude < 2){
                arrivedTarget = true;
         }
     }

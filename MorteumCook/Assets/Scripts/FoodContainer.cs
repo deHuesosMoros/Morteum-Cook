@@ -7,6 +7,7 @@ public class FoodContainer : MonoBehaviour
     public int amountFood;
     public GameObject prefabFood;
     public GameObject decorationContainer;
+    public TextMesh text;
     
     void Awake()
     {
@@ -17,7 +18,7 @@ public class FoodContainer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        text.text = amountFood.ToString();
         if(amountFood > 0 && decorationContainer.activeSelf == false){
             decorationContainer.SetActive(true);
         }else if(amountFood <= 0 && decorationContainer.activeSelf == true){
