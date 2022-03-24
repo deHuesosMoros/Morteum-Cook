@@ -120,6 +120,7 @@ MonoBehaviour:
   arrivedTarget: 0
   isGrabbed: 0
   chikenAnimator: {fileID: 6855149590319754429}
+  puffVFXPrefab: {fileID: 7156812262959865549, guid: 8f2eb9d5a51887b4e9534b8931b9fcef, type: 3}
   chikenGrabedClip: {fileID: 8300000, guid: 08580bb961c5337459b65b1eda9bb040, type: 3}
 --- !u!82 &49618836
 AudioSource:

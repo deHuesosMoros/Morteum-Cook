@@ -20,6 +20,7 @@ public class Animal : CatchableObjects
     public Animator chikenAnimator;
 
 
+    public GameObject puffVFXPrefab;
     private AudioSource chikenAsource;
     [Header("Sound Clips")]
     public AudioClip chikenGrabedClip;
@@ -79,6 +80,8 @@ public class Animal : CatchableObjects
 
     public void SetGrabbed()
     {
+        GameObject vfx = Instantiate(puffVFXPrefab);
+        vfx.transform.position = this.transform.position;
         //chikenAsource.clip = chikenGrabedClip;
         //chikenAsource.Play();
         PlayChikenScream();

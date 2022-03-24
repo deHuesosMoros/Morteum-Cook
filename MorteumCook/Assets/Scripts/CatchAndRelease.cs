@@ -8,6 +8,7 @@ public class CatchAndRelease : MonoBehaviour
     private GameObject handPoint;
     private GameObject pickedObject = null;
 
+
     void Awake()
     {
         handPoint = transform.GetChild(0).gameObject;
