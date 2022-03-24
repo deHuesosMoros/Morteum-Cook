@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CatchAndRelease : MonoBehaviour
 {
+    public Animator chefAnimController;
     private GameObject handPoint;
     private GameObject pickedObject = null;
 
@@ -15,6 +16,10 @@ public class CatchAndRelease : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            chefAnimController.SetTrigger("Grab");
+        } 
         
         
     }
@@ -27,12 +32,13 @@ public class CatchAndRelease : MonoBehaviour
                 CatchableObjects catchableObject = pickedObject.gameObject.GetComponent<CatchableObjects>();
                 if(table && table.canUseTable(pickedObject)){
 
+                    chefAnimController.SetBool("hasGrabbed", false);
                     pickedObject.GetComponent<Rigidbody>().useGravity = true;
                     pickedObject.GetComponent<Rigidbody>().isKinematic = false;
                     pickedObject.gameObject.transform.position =  table.tablePoint.transform.position;
                     pickedObject.gameObject.transform.SetParent(table.tablePoint.transform);
                     pickedObject = null;
-            } 
+                } 
             }
             
         }       
@@ -45,8 +51,9 @@ public class CatchAndRelease : MonoBehaviour
         CatchableObjects catchableObject = other.gameObject.GetComponent<CatchableObjects>();
         if (catchableObject != null)
         {
+            chefAnimController.SetBool("hasGrabbed", true);
             if (catchableObject.GetType() == typeof(Animal))
-            {
+            {                
                 Animal animal = catchableObject as Animal;
                 animal.SetGrabbed();
             }
@@ -59,6 +66,8 @@ public class CatchAndRelease : MonoBehaviour
 
     public void canGrabSomething(Collider other){
         if(Input.GetKey("e") && pickedObject== null){
+
+
             FoodContainer food = other.gameObject.GetComponent<FoodContainer>();
             CatchableObjects catchable = other.gameObject.GetComponent<CatchableObjects>();
             if(catchable){

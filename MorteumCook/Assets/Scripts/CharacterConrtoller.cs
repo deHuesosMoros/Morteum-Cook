@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterConrtoller : MonoBehaviour
 {
+    public Animator chefAnimController;
     private Rigidbody rbCharacter;
     public bool sideScroller; // the game is 2.5D?
     //Gameplay Variables
@@ -68,6 +69,8 @@ public class CharacterConrtoller : MonoBehaviour
     {
         grounded = IsGrounded(); //Set the animator from here or inside the function
         CalculateInputs(); //Update and listen inputs and calculate vector based on sidescroller bool
+
+        HandleAnimations();
        
     }
 
@@ -81,6 +84,15 @@ public class CharacterConrtoller : MonoBehaviour
 
 
         ManageSpeed(curDecel, maxSpeed + movingObjSpeed.magnitude, true);
+    }
+
+    public void HandleAnimations()
+    {
+        if (m_DistanceToTarget > 0.1f)        
+            chefAnimController.SetBool("Walking", true);        
+        else        
+            chefAnimController.SetBool("Walking", false);
+        
     }
 
     private void InitFloorChecks()
@@ -142,6 +154,11 @@ public class CharacterConrtoller : MonoBehaviour
 
     }
 
+
+    public void Grab()
+    {
+        Debug.Log("TEST ANIMATION EVENT");
+    }
 
     public bool MoveTo(Vector3 destination, float acceleration, float stopDistance, bool ignoreY) 
     {
