@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class CookTable : Table
 {
     public float timeCook = 0;
-    //public RawImage progres;
     public Image progressBar;
 
     // Start is called before the first frame update
@@ -20,10 +19,10 @@ public class CookTable : Table
     {
         if(isEmpty() == false){
             if(tablePoint.transform.GetChild(0).GetComponent<Ingredient>().isCooked == false){
-                timeCook ++;
-                Debug.Log("Time to cook "+ timeCook);
+                timeCook += Time.deltaTime;
                 IncreaseTimeBar();
-                if(timeCook >= 80){
+                if(timeCook >= 10){
+                progressBar.color =  Color.green;
                 Cooked(tablePoint.transform.GetChild(0).GetComponent<Ingredient>()); 
             } 
             }
@@ -31,11 +30,9 @@ public class CookTable : Table
             timeCook = 0;
         }
     }
-
-
     public void IncreaseTimeBar()
     {
-        float barProgress = Remap(timeCook, 0, 80, 0, 1);
+        float barProgress = Remap(timeCook, 0, 10, 0, 1);
         progressBar.fillAmount = barProgress;
     }
 
@@ -43,7 +40,4 @@ public class CookTable : Table
     {
         progressBar.fillAmount = 0;
     }
-
-
-
 }

@@ -24,8 +24,8 @@ public class FoodGenerator : Table
             }
             
             canIncrease = false;
-        //chrush.Crushing();
-        Destroy(tablePoint.transform.GetChild(0).gameObject, 1);
+        chrush.Crushing();
+        Destroy(tablePoint.transform.GetChild(0).gameObject, 0.7F);
             
         }
     }

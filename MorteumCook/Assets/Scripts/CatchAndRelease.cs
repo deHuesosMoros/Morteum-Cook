@@ -6,7 +6,7 @@ public class CatchAndRelease : MonoBehaviour
 {
     private GameObject handPoint;
     private GameObject pickedObject = null;
-
+    public Animator chefAnimController;
     void Awake()
     {
         handPoint = transform.GetChild(0).gameObject;
@@ -15,7 +15,10 @@ public class CatchAndRelease : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            chefAnimController.SetTrigger("Grab");
+        }
         
     }
 
@@ -26,7 +29,7 @@ public class CatchAndRelease : MonoBehaviour
             if(pickedObject != null){
                 CatchableObjects catchableObject = pickedObject.gameObject.GetComponent<CatchableObjects>();
                 if(table && table.canUseTable(pickedObject)){
-
+                    chefAnimController.SetBool("hasGrabbed", false);
                     pickedObject.GetComponent<Rigidbody>().useGravity = false;
                     pickedObject.GetComponent<Rigidbody>().isKinematic = false;
                     pickedObject.gameObject.transform.position =  table.tablePoint.transform.position;
@@ -44,7 +47,8 @@ public class CatchAndRelease : MonoBehaviour
 
         CatchableObjects catchableObject = other.gameObject.GetComponent<CatchableObjects>();
         if (catchableObject != null)
-        {
+        {   
+            chefAnimController.SetBool("hasGrabbed", true);
             if (catchableObject.GetType() == typeof(Animal))
             {
                 Animal animal = catchableObject as Animal;
