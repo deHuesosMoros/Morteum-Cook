@@ -27,6 +27,7 @@ public class CookTable : Table
             } 
             }
         }else{
+            Reset();
             timeCook = 0;
         }
     }

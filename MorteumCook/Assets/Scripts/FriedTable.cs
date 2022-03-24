@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class FriedTable : Table
 {
-    public int timeCook = 0;
-
+    public float timeCook = 0;
+    public Image progressBar;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,22 +13,32 @@ public class FriedTable : Table
     }
 
     // Update is called once per frame
-    void Update()
+   void Update()
     {
-        
         if(isEmpty() == false){
-            timeCook ++;
-            Debug.Log("Está entrando");
-            if(timeCook >= 300){
+            if(tablePoint.transform.GetChild(0).GetComponent<Ingredient>().isCooked == false){
+                timeCook += Time.deltaTime;
+                IncreaseTimeBar();
+                if(timeCook >= 10){
+                progressBar.color =  Color.green;
                 Cooked(tablePoint.transform.GetChild(0).GetComponent<Ingredient>()); 
-                timeCook = 0;
             } 
+            }
         }else{
+            Reset();
             timeCook = 0;
         }
-        
+    }
+    public void IncreaseTimeBar()
+    {
+        float barProgress = Remap(timeCook, 0, 10, 0, 1);
+        progressBar.fillAmount = barProgress;
     }
 
+    public void Reset()
+    {
+        progressBar.fillAmount = 0;
+    }
     
 
     

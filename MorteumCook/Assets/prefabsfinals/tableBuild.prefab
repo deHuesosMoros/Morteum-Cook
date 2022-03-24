@@ -27,7 +27,7 @@ Transform:
   m_LocalPosition: {x: 0.7300005, y: 0.5010004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0.21100608}
   m_Children:
-  - {fileID: 7381124571021690279}
+  - {fileID: 3702871184424188044}
   m_Father: {fileID: 2843820218978755043}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -143,12 +143,43 @@ MonoBehaviour:
   tablePoint: {fileID: 0}
   ingredientAllowed: -1
   dishPrefab: {fileID: 8196773091001132951, guid: 4ca75c85b38cb6443b960f228fca4ab1, type: 3}
+--- !u!1 &7586292593444810290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3702871184424188044}
+  m_Layer: 0
+  m_Name: Recipe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3702871184424188044
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7586292593444810290}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.7300005, y: -0.5010004, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 4.7392}
+  m_Children:
+  - {fileID: 7381124571021690279}
+  m_Father: {fileID: 1895537516958566803}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7054251983155929676
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1895537516958566803}
+    m_TransformParent: {fileID: 3702871184424188044}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 8e181882a337b7241874bdaaf2f84d88, type: 3}
       propertyPath: m_RootOrder
@@ -164,15 +195,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e181882a337b7241874bdaaf2f84d88, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.4190459
+      value: 0.08842123
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e181882a337b7241874bdaaf2f84d88, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.7300005
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e181882a337b7241874bdaaf2f84d88, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.007
+      value: 0.5080004
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e181882a337b7241874bdaaf2f84d88, type: 3}
       propertyPath: m_LocalPosition.z
@@ -184,15 +215,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e181882a337b7241874bdaaf2f84d88, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e181882a337b7241874bdaaf2f84d88, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e181882a337b7241874bdaaf2f84d88, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e181882a337b7241874bdaaf2f84d88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -273,3 +304,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recipeAcumulator: 0
+  texture: {fileID: 0}
+  materialdishes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

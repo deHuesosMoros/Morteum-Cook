@@ -25,6 +25,10 @@ public class FoodGenerator : Table
             
             canIncrease = false;
         chrush.Crushing();
+        Animal chicken = tablePoint.transform.GetChild(0).gameObject.GetComponent<Animal>();
+        GameObject vfx = Instantiate(chicken.puffVFXPrefab);
+        vfx.transform.position = chicken.transform.position;
+        chicken.PlayChikenScream();
         Destroy(tablePoint.transform.GetChild(0).gameObject, 0.7F);
             
         }

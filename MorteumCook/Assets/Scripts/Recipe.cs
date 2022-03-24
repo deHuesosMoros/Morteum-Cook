@@ -99,6 +99,31 @@ public class Recipe : CatchableObjects
             texture.GetComponent<MeshRenderer>().material = materialdishes[14];
         break;
        
+        case "Blood, Bone, Sesos, Worm":
+case "Blood, Bone, Worm, Sesos":
+case "Blood, Sesos, Bone, Worm":
+case "Blood, Sesos, Worm, Bone":
+case "Blood, Worm, Sesos, Bone":
+case "Blood, Worm, Bone, Sesos":
+case "Bone, Blood, Sesos, Worm":
+case "Bone, Blood, Worm, Sesos":
+case "Bone, Sesos, Blood, Worm":
+case "Bone, Sesos, Worm, Blood":
+case "Bone, Worm, Sesos, Blood":
+case "Bone, Worm, Blood, Sesos":
+case "Sesos, Blood, Worm, Bone":
+case "Sesos, Blood, Bone, Worm":
+case "Sesos, Worm, Blood, Bone":
+case "Sesos, Worm, Bone, Blood":
+case "Sesos, Bone, Worm, Blood":
+case "Sesos, Bone, Blood, Worm":
+case "Worm, Blood, Sesos, Bone":
+case "Worm, Blood, Bone, Sesos":
+case "Worm, Sesos, Blood, Bone":
+case "Worm, Sesos, Bone, Blood":
+case "Worm, Bone, Sesos, Blood":
+case "Worm, Bone, Blood, Sesos":
+        break;
           default :
               
               break;
