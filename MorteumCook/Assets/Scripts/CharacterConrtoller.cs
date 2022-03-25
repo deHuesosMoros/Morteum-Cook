@@ -224,7 +224,7 @@ public class CharacterConrtoller : MonoBehaviour
             characterPos.y = 0;
             lookDir.y = 0;
         }
-        //Un número mayor o menor a este hará que mire hacia el otro lado al voltear
+        //Un nï¿½mero mayor o menor a este harï¿½ que mire hacia el otro lado al voltear
         //lookDir.z = 0;
 
 
@@ -280,7 +280,6 @@ public class CharacterConrtoller : MonoBehaviour
         }
 
         movingObjSpeed = Vector3.zero;
-        Debug.Log("Am Not touching the floor");
         //no none of the floorchecks hit anything, we must be in the air (or water)
         return false;
     }

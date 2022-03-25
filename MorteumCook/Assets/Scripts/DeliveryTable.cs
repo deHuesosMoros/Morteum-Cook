@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DeliveryTable : Table
 {
     public GameManager manager;
+    public GameObject incorrect;
+    public GameObject correct;
+    public float timeForAdvice = 0;
 
     void Start()
     {
@@ -17,14 +21,20 @@ public class DeliveryTable : Table
         if(isEmpty() == false){
             Recipe recipeProvided = tablePoint.transform.GetChild(0).GetComponent<Recipe>();
             if(manager.choosedRecipe  == recipeProvided.recipeAcumulator){
+                timeForAdvice += Time.time;
                 manager.winPoints();
                 manager.newRecipe();
-                Debug.Log("Mensaje de Plato Correcto de Receta");
+                correct.SetActive(true);
+                 
             }else{
-                Debug.Log("Mensaje de Error de Receta");
+                 timeForAdvice += Time.time;
+                incorrect.SetActive(true);
+                
+               
             }
             Destroy(tablePoint.transform.GetChild(0).gameObject);
         }
+        
                     
         
     }

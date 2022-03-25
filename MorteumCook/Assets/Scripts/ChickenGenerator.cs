@@ -23,7 +23,6 @@ public class ChickenGenerator : MonoBehaviour
     void Start()
     {
         CreateChiken();
-        Debug.Log("Chicken Genrtor");
     }
 
     // Update is called once per frame

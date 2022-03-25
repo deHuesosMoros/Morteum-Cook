@@ -28,7 +28,6 @@ public class Recipe : CatchableObjects
     }
 
     public void changeTexture(){
-        Debug.Log(recipeAcumulator.ToString());
       switch (recipeAcumulator.ToString()) {
           case "Bone":
               texture.GetComponent<MeshRenderer>().material = materialdishes[2];
@@ -123,6 +122,7 @@ case "Worm, Sesos, Blood, Bone":
 case "Worm, Sesos, Bone, Blood":
 case "Worm, Bone, Sesos, Blood":
 case "Worm, Bone, Blood, Sesos":
+texture.GetComponent<MeshRenderer>().material = materialdishes[15];
         break;
           default :
               

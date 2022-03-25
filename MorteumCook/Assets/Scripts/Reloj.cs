@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class Reloj : MonoBehaviour
 {
     [Tooltip("Tiempo Inicial en Segundos")]
@@ -41,8 +42,11 @@ public class Reloj : MonoBehaviour
         }
         
     }
+
+    
     public void ActualizarReloj(float tiempoEnSegundos)
     {
+       
         int minutos = 0;
         int segundos = 0;
         string textoDelReloj;
@@ -55,8 +59,12 @@ public class Reloj : MonoBehaviour
         textoDelReloj = minutos.ToString("00") + ":" + segundos.ToString("00");
 
         mytext.text = textoDelReloj;
-
+         if(minutos <=0 && segundos<= 0){
+             SceneManager.LoadScene("EscGamerOver");
+        }
     }
+
+
 
     public void Pausar()
 
