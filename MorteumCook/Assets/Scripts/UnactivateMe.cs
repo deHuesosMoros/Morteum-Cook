@@ -15,7 +15,7 @@ public class UnactivateMe : MonoBehaviour
     void Update()
     {
             timeForAdvice += Time.time;
-            if(timeForAdvice >= 300){
+            if(timeForAdvice >= 700){
                 timeForAdvice = 0;
                 gameAdvice.SetActive(false);
             }

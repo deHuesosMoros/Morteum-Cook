@@ -37,6 +37,7 @@ public class FriedTable : Table
 
     public void Reset()
     {
+        progressBar.color =  Color.yellow;
         progressBar.fillAmount = 0;
     }
     

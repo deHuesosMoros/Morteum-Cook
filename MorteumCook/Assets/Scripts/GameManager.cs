@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject animalPrefab;
     public IngredientType[] combinations = new IngredientType[11];
     public IngredientType choosedRecipe;
-    public int playerScore;
+    static public int playerScore;
     public GameObject sesosRecipe;
     public GameObject wormRecipe;
     public GameObject boneRecipe;
