@@ -6,21 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Escenario Profe.unity
-    guid: ad8a21a1efd633f49a24ec613395641b
-  - enabled: 1
     path: Assets/Scenes/MainMenuEsb.unity
     guid: 2bb9528a3cc29f643bc819b4568c1058
   - enabled: 1
-    path: Assets/Scenes/Game.unity
-    guid: f1522fcf1d2e1a64aba39b0640b1857a
-  - enabled: 1
-    path: Assets/Scenes/EscControl.unity
-    guid: ca31b896ccbda4f66b22e548d2d8e378
-  - enabled: 1
     path: Assets/Scenes/Escenario.unity
     guid: 767d3aee363954c8ba2e47d836678a17
-  - enabled: 1
-    path: Assets/Scenes/McGuia.unity
-    guid: 11aa1796bf05b7542a1997b40d8cd3fe
   m_configObjects: {}

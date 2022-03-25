@@ -62,20 +62,19 @@ public class MainMenu : MonoBehaviour
         canvasMenu.SetActive(true);
     }
 
-    public void Guia()
-    {
-
-        SceneManager.LoadScene("McGuia");
-    }
-
-        
+   
+          
        
     
-    public void Guia(string nombreGuia)
-
+    public void Guia()
     {
-        canvasGuia.SetActive(true);
-      canvasMenu.SetActive(false);
-      
+      canvasGuia.SetActive(true);
+      canvasMenu.SetActive(false);      
+    }
+
+    public void HideGuia()
+    {
+        canvasGuia.SetActive(false);
+        canvasMenu.SetActive(true);
     }
  }
