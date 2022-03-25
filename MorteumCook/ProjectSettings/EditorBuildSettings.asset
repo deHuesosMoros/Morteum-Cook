@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Escenario.unity
     guid: 767d3aee363954c8ba2e47d836678a17
+  - enabled: 1
+    path: Assets/Scenes/EscGamerOver.unity
+    guid: ba1495b823e244645a64689793816ce4
   m_configObjects: {}
